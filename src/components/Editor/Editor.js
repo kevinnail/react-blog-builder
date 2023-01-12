@@ -11,12 +11,15 @@ export default function Editor({
   setFont,
   align,
   setAlign,
+  text,
+  setText,
 }) {
   const handleChange = (e) => {
     e.target.name === 'title' && setTitle(e.target.value);
     e.target.name === 'subtitle' && setSubTitle(e.target.value);
     e.target.name === 'font' && setFont(e.target.value);
     e.target.name === 'align' && setAlign(e.target.value);
+    e.target.name === 'text-area' && setText(e.target.value);
   };
 
   return (
@@ -60,7 +63,7 @@ export default function Editor({
         </div>
       </div>
       <div className="form-control">
-        <textarea style={{ height: '250px' }} />
+        <textarea name="text-area" style={{ height: '250px' }} onChange={handleChange} />
         <label>Text</label>
       </div>
     </div>
