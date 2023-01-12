@@ -7,11 +7,8 @@ export default function Editor({
   setTitle,
   subtitle,
   setSubTitle,
-  font,
   setFont,
-  align,
   setAlign,
-  text,
   setText,
 }) {
   const handleChange = (e) => {
